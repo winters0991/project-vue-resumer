@@ -6,7 +6,7 @@
       <div class='actions'>
         <button class="primary">保存</button>
         <button>预览</button>
-      <div>
+      </div>
     </div>
   </div>
 </template>
@@ -43,5 +43,15 @@ button {// 由于加了 scoped， 所以这个 button 选择器只在本组件�
   width: 72px;
   height: 32px;
   border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #222;
+  &:hover {
+    box-shadow: 1px 1px 1px hsla(0,0,0,.5);
+  }
+  &.primary {
+    background: #02af5f;
+    color: white;
+  }
 }
 </style>
