@@ -3,7 +3,9 @@
     <nav>
       <ol>
         <li v-for='(item,index) in resume.config' :class='{active: item === selected}' @click='selected = item'>
-        {{index}}
+        <svg class='icon'>
+          <use :xlink:href="`#icon-${item.icon}`"></use>
+        </svg>
         </li>
       </ol>
     </nav>
@@ -71,6 +73,10 @@ export default {
         }
       }
     }
+  }
+  svg.icon {
+    width: 24px;
+    height: 24px;
   }
 }
 ol {

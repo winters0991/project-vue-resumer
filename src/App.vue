@@ -65,5 +65,12 @@ export default {
   flex-grow: 1;
   margin-left: 16px;
 }
+svg.icon {
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+  font-size: 16px;
+  vertical-align: -0.1em;
+}
 
 </style>
