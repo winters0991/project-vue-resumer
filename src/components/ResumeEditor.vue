@@ -2,7 +2,7 @@
   <div id="resumeEditor">
     <nav>
       <ol>
-        <li v-for='(item,index) in resume.config' :class='{active: item === selected}' @click='selected = item'>
+        <li v-for='(item,index) in resume.config' :class='{active: item.field === selected}' @click='selected = item.field'>
         <svg class='icon'>
           <use :xlink:href="`#icon-${item.icon}`"></use>
         </svg>
@@ -11,7 +11,7 @@
     </nav>
     <ol class="panels">
       <li v-for='item in resume.config' v-show='item.field === selected'>
-        {{resume[item.field]}}
+         {{resume[item.field]}}
       </li>  
     </ol>
   </div>
@@ -37,7 +37,7 @@ export default {
           city: '',
           title: ''
         },
-        'work history': [],
+       'work history': [],
         education: [],
         projects: [],
         awards: [],

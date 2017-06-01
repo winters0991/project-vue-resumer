@@ -28,7 +28,7 @@ export default {
     }
   },
   components: {Topbar, ResumeEditor, ResumePreview},
-  created(){
+  created() {
     document.body.insertAdjacentHTML('afterbegin', icons) //插入元素内部的第一个子节点之前
   }
 }
